@@ -1,3 +1,14 @@
 def alphabetize(arr)
-  # code here
+  arr.each do |string|
+    string.tr!(
+      "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz", 
+      "abcdefghijklmnopqrstuvwxyz{|")
+  end
+  new_arr = arr.sort
+  new_arr.each do |string|
+    string.tr!(
+      "abcdefghijklmnopqrstuvwxyz{|",
+      "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz"
+      )
+  end
 end
